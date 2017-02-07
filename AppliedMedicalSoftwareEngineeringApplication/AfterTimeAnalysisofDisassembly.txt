@@ -1,0 +1,8 @@
+Disassembly of Object File to Readable C:
+
+Looking more into the problem and doing a bit more research, I noticed that instead of using objdump, I had to add the letter ‘g’ in front of it to use gobjdump to avoid any libraries interfering with the Xcode ones. After, I was able to get assembly code without the warnings by using the following command: 
+
+gobjdump -D f.o -b elf32-littlearm
+
+
+The last portion with the -b and elf32… is for providing a target switch to make the file connected and not ambiguous (the error I got when not using -b elf32…). Doing so I get proper assembly code.
