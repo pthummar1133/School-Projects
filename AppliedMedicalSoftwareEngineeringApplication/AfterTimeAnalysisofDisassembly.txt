@@ -6,3 +6,5 @@ gobjdump -D f.o -b elf32-littlearm
 
 
 The last portion with the -b and elf32… is for providing a target switch to make the file connected and not ambiguous (the error I got when not using -b elf32…). Doing so I get proper assembly code.
+
+As I got the proper assembly code, my goal is to find a way to convert the assembly back to readable C. That is what I am at right now regarding the conversion of disassembling an object file to readable C. 
