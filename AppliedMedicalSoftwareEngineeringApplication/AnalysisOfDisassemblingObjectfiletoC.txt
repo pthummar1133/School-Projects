@@ -1,0 +1,12 @@
+Plan of Execution: Disassemble f.o into human readable C.
+
+Seeing the f.o file, I noticed that it was an Object file that needed to be converted into human readable C (as stated in the instructions). My first step was to just view what was in the object file, just to make sure my assumption was correct. As I could not read the object file, I went online to see different options into finding a disassembler tool for the MacOs. I did find some options, but I did find that objdump was a good tool to use. 
+
+I wanted to see if I had it on my MacOs, and after quickly searching online, I noticed that objdump was part of the GNU Binutils for fine-grained control over executables and other binary data. I was able to install binutils via Homebrew (open-source software package management system that simplifies the installation of software on Apple's macOS operating system). Doing so I was able to obtain the binutils needed to use objdump in Terminal.
+
+I ran the command: objdump -d f.o
+I wanted to see how the code was disassembled. It was disassembled to assembly language, showing line by line analysis. I did obtain a lot of warnings, as I am sure my libraries were not set up right. So I decided to also take a plan B in finding another option for disassembling the object file. 
+
+I was able to find an online disassembler to see if the results that I did get on terminal were somewhat accuracy, and the online disassembler did in fact show my command in terminal converting the object file code to assembly code (picture in repository). 
+
+My task however is to convert the f.o file to human readable C. Because of the the errors I was obtaining on Terminal, and the time constraint, I was not able to convert it to readable C. I am going to figure it out, however, even though my time did run out. I was looking into using otool next on the macOS to achieve this disassembly. 
